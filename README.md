@@ -1,27 +1,27 @@
-# AmazonClient
+# Amazon Advertising API Client Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
-## Development server
+An Angular App to search and save products from Amazon Advertising API to MongoDB using ExpressJS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Live Demo
+<a target="_blank" href="http://tomerdbz.co.il/Shop">
+  Here
+</a>
 
-## Code scaffolding
+## Dependencies
+This project was created with the following technologies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Application - Angular 5 CLI
 
-## Build
+<img src="https://angular.io/assets/images/logos/angular/angular.png" width="50" height="50">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Grid System - Bootstrap
 
-## Running unit tests
+<img src="https://getbootstrap.com/assets/img/bootstrap-stack.png" width="50" height="50">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Styles - SCSS 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<img src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" width="50" height="50">
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

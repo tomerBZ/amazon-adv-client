@@ -15,8 +15,8 @@ import { HttpService } from '../shared/services/http/http.service';
 export class HomeComponent implements OnInit {
   products: Product[];
   searchForm: FormGroup;
-  private serverError: boolean;
-  private errorMessage: string;
+  serverError: boolean;
+  errorMessage: string;
 
   constructor(private _http: HttpService, private builder: FormBuilder) {
   }

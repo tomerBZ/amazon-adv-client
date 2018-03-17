@@ -14,20 +14,20 @@ export class HttpService {
   }
 
   fetchAll(): Promise<Product[]> {
-    return this.http.get<Product[]>('http://localhost:3000/')
+    return this.http.get<Product[]>('https://amazon-adv-api.herokuapp.com/')
         .toPromise()
         .then((response) => response)
         .catch((error) => Promise.reject(error.message || error));
   }
 
   search(ASIN: string): Observable<any> {
-    return this.http.get(`http://localhost:3000/search/${ASIN}`)
+    return this.http.get(`https://amazon-adv-api.herokuapp.com/search/${ASIN}`)
       .map(response => response)
       .catch(error => Observable.throw(error));
   }
 
   delete(id: string): Observable<any> {
-    return this.http.post('http://localhost:3000/delete/', {id: id})
+    return this.http.post('https://amazon-adv-api.herokuapp.com/delete/', {id: id})
       .map(data => data)
       .catch(error => Observable.throw(error));
   }

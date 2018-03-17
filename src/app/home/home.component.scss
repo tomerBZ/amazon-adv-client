@@ -1,0 +1,27 @@
+.navbar-brand {
+  color: white;
+  i {
+    background-color: #ec5050;
+    color: white;
+    padding: 7px;
+    border-radius: 25px;
+    margin-right: 5px;
+  }
+}
+.card {
+  height: 100%;
+  .delete {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    top: -10px;
+    right: -10px;
+  }
+  .card-img-top {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .thumbnail {
+    max-width: 50px;
+  }
+}

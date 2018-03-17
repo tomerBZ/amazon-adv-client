@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+  <a class="navbar-brand d-flex justify-content-center align-items-center" href="#"><i class="material-icons">shopping_cart</i> Tomer's Shop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse">
+    <form [formGroup]="searchForm" class="form-inline">
+      <input type="search" formControlName="search" class="form-control" placeholder="Search by ASIN">
+      <span *ngIf="serverError" class="text-danger">{{ errorMessage }}</span>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-6 mb-4" *ngFor="let product of products">
+      <div class="card">
+          <span class="btn-group-sm delete">
+            <button type="button" class="btn btn-danger bmd-btn-fab" (click)="deleteMe(product._id)">
+              <i class="material-icons">delete</i>
+            </button>
+          </span>
+        <img class="card-img-top" [src]="product.image" alt="Card image cap">
+        <div class="thumbnails d-flex justify-content-between align-items-center p-4">
+          <img *ngFor="let img of product.imageSets" [src]="img" class="img-fluid thumbnail">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.price }} - {{ product.lowPrice }}</p>
+          <p class="card-text">{{ product.description }}</p>
+          <h6>Features</h6>
+          <p *ngFor="let feature of product.features" class="card-text">{{ feature }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
